@@ -36,6 +36,12 @@ app.use("/api", authRoutes);
 app.use("/api/query", queryRoutes);
 app.use("/api/response", responseRoutes);
 
+app.get("/test", (req, res) => {
+  return res.status(200).json({
+    message: "All Are Connected",
+  });
+});
+
 //CONNECTING SERVER
 const port = process.env.PORT || 7000;
 
